@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+
+.sfac-logo {
+  width: 150px;
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+.main-banner {
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+}
+
+.main-banner {
+  position: relative;
+  text-align: left;
+  height: 1000px; /* important: gives the section height */
+  overflow: hidden;
+}
+
+.banner-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ensures full coverage */
+  z-index: 0; /* below overlay */
+}
+
+
+.video-overlay {
+  position: relative;
+  background: rgba(0,0,0,0.4); /* dark overlay */
+  height: 100%;
+  z-index: 1; /* above banner */
+  display: flex;
+  align-items: center;
+}
+
+
+.main-banner .row.align-items-center {
+  display: flex;
+  align-items: center;
+  min-height: 400px; 
+}
+
+.main-banner .logo-caption-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.caption h3 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+  color: white;
+  font-weight: 600;
+}
+
+.caption h1 {
+  font-weight: 800;
+  font-size: 3rem;
+  line-height: 1.2;
+  color: white;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+
+.caption p {
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 25px;
+}
+
+.main-button-red {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.acads {
+  text-align: right;
+  font-style: italic;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  white-space: nowrap;
+}
+
+.acads .academics {
+  color: #000;
+  font-weight: 700;
+}
+
+.acads .and-beyond {
+  color: #ff0000; 
+  font-weight: 700;
+}
+
+.main-banner .caption {
+  text-align: left;
+  flex: 1;
+}
+.header-area .container {
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+}
+
+.header-area .main-nav {
+  width: auto; 
+}
+
+.header-area .main-nav .nav {
+  display: flex;
+  justify-content: center; 
+  gap: 30px; 
+}
+/* Section title */
+.section-heading h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  justify-items: center;
+  align-items: stretch;
+  margin-top: 50px;
+}
+
+.course-card {
+  width: 100%;
+  max-width: 400px;
+  height: 400px; /* force equal height for all */
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.course-card .card-image {
+  width: 100%;
+  height: 100%;
+}
+
+.course-card .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* crops and fills evenly */
+  display: block;
+}
+
+
+
+
+
+.card-image {
+  position: relative;
+}
+
+.card-image img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.price-tag {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: #e63946;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-body h4 {
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+}
+.apply-now {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.image-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 15px;
+}
+
+.image-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+</style>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="TemplateMo">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <title>Education Meeting HTML5 Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+
+
+<!-- TemplateMo 569 Edu Meeting
+
+https://templatemo.com/tm-569-edu-meeting -->
+
+
+
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <nav class="main-nav">
+                    
+                      <!-- ***** Menu Start ***** -->
+                      <ul class="nav">
+                          <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                          <li><a href="meetings.html">About</a></li>
+                           <li class="has-sub">
+                              <a href="javascript:void(0)">Department</a>
+                              <ul class="sub-menu">
+                                  <li><a href="meetings.html">Basic Education</a></li>
+                                  <li><a href="meeting-details.html">Higher Education</a></li>
+                              </ul>
+                          </li>
+
+
+                          <li class="has-sub">
+                              <a href="javascript:void(0)">Student Services</a>
+                              <ul class="sub-menu">
+                                  <li><a href="meetings.html">Bacoor</a></li>
+                                  <li><a href="meeting-details.html">Las Piñas</a></li>
+                              </ul>
+                          </li>
+                          <li class="scroll-to-section"><a href="#contact">Contact Us</a></li> 
+                      </ul>        
+                      <a class='menu-trigger'>
+                          <span>Menu</span>
+                      </a>
+                      <!-- ***** Menu End ***** -->
+                  </nav>
+              </div>
+          </div>
+      </div>
+  </header>
+
+<!-- ***** Main Banner Area Start ***** -->
+ 
+<section class="section main-banner" id="top" data-section="section1">
+  <!-- Banner image -->
+  <img src="assets/images/sfac.jpg" alt="sfac background" class="banner-bg">
+
+  <!-- Overlay + content -->
+  <div class="video-overlay header-text">
+    <div class="container banner-content">
+      <div class="row logo-caption-container">
+        <!-- Logo -->
+        <div class="col-auto">
+          <img src="assets/images/sfac_logo.png" alt="SFAC Logo" class="sfac-logo">
+        </div>
+        <!-- Text -->
+        <div class="col">
+          <div class="caption">
+            <h3>Welcome to</h3>
+            <h1>Saint Francis of Assisi College - Bacoor</h1>
+            <p>#96 Bayanan, City of Bacoor, Cavite</p>
+            <div class="main-button-red">
+              <div class="scroll-to-section"><a href="#contact">Contact Us!</a></div>
+              <div class="acads">
+                <h4>
+                  <span class="academics">Academics.</span>
+                  <span class="and-beyond">And Beyond</span>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <!-- ***** Main Banner Area End ***** -->
+
+
+  
+  <section class="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="owl-service-item owl-carousel">
+          
+            <div class="item">
+              <div class="icon">
+                <img src="assets/images/service-icon-01.png" alt="">
+              </div>
+              <div class="down-content">
+                <h4>COLLEGE DEPARTMENT</h4>
+                
+              </div>
+            </div>
+            
+            <div class="item">
+              <div class="icon">
+                <img src="assets/images/service-icon-02.png" alt="">
+              </div>
+              <div class="down-content">
+                <h4>SENIOR HIGH SCHOOL</h4>
+                
+              </div>
+            </div>
+            
+            <div class="item">
+              <div class="icon">
+                <img src="assets/images/service-icon-03.png" alt="">
+              </div>
+              <div class="down-content">
+                <h4>JUNIOR HIGHSCHOOL</h4>
+               
+              </div>
+            </div>
+            
+            <div class="item">
+              <div class="icon">
+                <img src="assets/images/service-icon-02.png" alt="">
+              </div>
+              <div class="down-content">
+                <h4>GRADE SCHOOL</h4>
+               
+              </div>
+            </div>
+            
+            <div class="item">
+              <div class="icon">
+                <img src="assets/images/service-icon-03.png" alt="">
+              </div>
+              <div class="down-content">
+                <h4>PRE-SCHOOL</h4>
+    
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="upcoming-meetings" id="meetings">
+  <div class="container text-center">
+    <div class="section-heading mb-5">
+      <h2>What we Offer</h2>
+    </div>
+
+    <!-- Centered Program Offerings -->
+<div class="row justify-content-center">
+  <div class="col-lg-4 col-md-6 mb-4 d-flex">
+    <div class="categories align-items-stretch p-4 bg-white rounded-4 shadow-sm w-100 d-flex flex-column">
+      <h4>Higher Education</h4>
+      <hr>
+      <ul class="text-start flex-grow-1">
+        <li>BS in Business Administration</li>
+        <li>BS in Computer Science</li>
+        <li>BS in Tourism Management</li>
+        <li>BS in Hospitality Management</li>
+        <li>Bachelor of Early Childhood Education</li>
+        <li>Bachelor of Elementary Education</li>
+        <li>Bachelor of Physical Education</li>
+        <li>Bachelor of Secondary Education</li>
+      </ul>
+      <hr>
+      <div class="main-button-red mt-auto text-center">
+        <a href="#" class="btn btn-danger rounded-pill px-4 py-2">ENROLL NOW!</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-4 col-md-6 mb-4 d-flex">
+    <div class="categories align-items-stretch p-4 bg-white rounded-4 shadow-sm w-100 d-flex flex-column">
+      <h4>Basic Education</h4>
+      <hr>
+      <ul class="text-start flex-grow-1">
+        <li>PRE-SCHOOL</li><br>
+        <li>GRADE SCHOOL</li>
+        <li>JUNIOR HIGH SCHOOL</li>
+        <li>SENIOR HIGH SCHOOL</li>
+      </ul>
+      <hr>
+      <div class="main-button-red mt-auto text-center">
+        <a href="#" class="btn btn-danger rounded-pill px-4 py-2">ENROLL NOW!</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="thumb position-relative">
+  <div class="price position-absolute top-0 start-0 m-2 bg-light rounded-pill px-2 py-1 fw-bold"></div>
+
+  <a href="meeting-details.html"></a>
+  <a href="meeting-details.html" class="text-decoration-none text-dark"></a>
+</div>
+
+</div>
+</div>
+
+<div class="price position-absolute top-0 start-0 m-2 bg-light rounded-pill px-2 py-1 fw-bold"></div>
+
+<a href="meeting-details.html"></a>
+
+</div>
+
+<div class="down-content p-3 text-start">
+  <div class="date text-danger fw-bold"></div>
+
+  <a href="meeting-details.html" class="text-decoration-none text-dark"></a>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+
+
+<section class="apply-now" id="apply">
+  <div class="container">
+    <div class="row justify-content-center">
+      <!-- First Image -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="image-card rounded-4 shadow-sm overflow-hidden">
+          <img src="assets/images/bed_1.jpg" class="img-fluid w-100" alt="SFAC Basic Education">
+        </div>
+      </div>
+
+      <!-- Middle Image -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="image-card rounded-4 shadow-sm overflow-hidden">
+          <img src="assets/images/hed_1.jpg" class="img-fluid w-100" alt="SFAC Higher Education">
+        </div>
+      </div>
+
+      <!-- Third Image -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="image-card rounded-4 shadow-sm overflow-hidden">
+          <img src="assets/images/basic_ed.jpg" class="img-fluid w-100" alt="SFAC Basic Education">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="our-courses" id="courses">
+  <div class="container">
+    <div class="section-heading text-center">
+      <h2>Admission</h2>
+    </div>
+
+    <!-- Uniform 4-card grid -->
+    <div class="courses-grid">
+      <article class="course-card">
+        <div class="card-image">
+          <img src="assets/images/bscs.jpg" alt="BS in Computer Science">
+        </div>
+      </article>
+
+      <article class="course-card">
+        <div class="card-image">
+          <img src="assets/images/bstm.jpg" alt="BS in Tourism Management">
+        </div>
+      </article>
+
+      <article class="course-card">
+        <div class="card-image">
+          <img src="assets/images/bsba.jpg" alt="BS in Business Administration">
+        </div>
+      </article>
+
+      <article class="course-card">
+        <div class="card-image">
+          <img src="assets/images/bshm.jpg" alt="BS in Hospitality Management">
+        </div>
+      </article>
+    </div>
+  </div>
+
+  
+</section>
+
+
+
+      
+
+      <!-- Add the rest of your items here, following the pattern above -->
+      <!-- For brevity I included 2 examples — duplicate and update image/title/price as needed -->
+
+  <section class="our-facts" style="color: black;">
+  <style>
+    .our-facts {
+      color: black !important;
+    }
+
+    .our-facts .count-digit,
+    .our-facts .count-title,
+    .our-facts h2 {
+      color: black !important;
+    }
+  </style>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2>A Few Facts About Our University</h2>
+          </div>
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-12">
+                <div class="count-area-content">
+                  <div class="count-digit">842</div>
+                  <div class="count-title">Enrolled Students</div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="count-area-content">
+                  <div class="count-digit">315</div>
+                  <div class="count-title">New Students</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-12">
+                <div class="count-area-content new-students">
+                  <div class="count-digit">7</div>
+                  <div class="count-title">Pending Students</div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="count-area-content">
+                  <div class="count-digit">527</div>
+                  <div class="count-title">Old Student</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+      <div class="col-lg-6 align-self-center">
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="contact-us" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 align-self-center">
+          <div class="row">
+            <div class="col-lg-12">
+              <form id="contact" action="" method="post">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <h2>Join us now</h2>
+                  </div>
+                  <div class="col-lg-4">
+                    <fieldset>
+                      <input name="name" type="text" id="name" placeholder="YOURNAME...*" required="">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-4">
+                    <fieldset>
+                    <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="YOUR EMAIL..." required="">
+                  </fieldset>
+                  </div>
+                  <div class="col-lg-4">
+                    <fieldset>
+                      <input name="subject" type="text" id="subject" placeholder="SUBJECT...*" required="">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <textarea name="message" type="text" class="form-control" id="message" placeholder="YOUR MESSAGE..." required=""></textarea>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <button type="submit" id="form-submit" class="button">SEND MESSAGE NOW</button>
+                    </fieldset>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="right-info">
+            <ul>
+              <li>
+                <h6>Phone Number</h6>
+                <span>0994-706-3287</span>
+              </li>
+              <li>
+                <h6>Email Address</h6>
+                <span>admissions.sfacbacoor<br>@gmail.com</span>
+              </li>
+              <li>
+                <h6>Street Address</h6>
+                <span>96, Bayanan Bacoor, Cavite</span>
+              </li>
+              <li>
+                <h6>Website URL</h6>
+                <span>stfrancisbacoor.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>Copyright © 2022 Edu Meeting Co., Ltd. All Rights Reserved. 
+          <br>Design: <a href="https://templatemo.com" target="_parent" title="free css templates">TemplateMo</a></p>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/tabs.js"></script>
+    <script src="assets/js/video.js"></script>
+    <script src="assets/js/slick-slider.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
+
+        var showSection = function showSection(section, isAnimate) {
+          var
+          direction = section.replace(/#/, ''),
+          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+          reqSectionPos = reqSection.offset().top - 0;
+
+          if (isAnimate) {
+            $('body, html').animate({
+              scrollTop: reqSectionPos },
+            800);
+          } else {
+            $('body, html').scrollTop(reqSectionPos);
+          }
+
+        };
+
+        var checkSection = function checkSection() {
+          $('.section').each(function () {
+            var
+            $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
+              var
+              currentId = $this.data('section'),
+              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+              reqLink.closest('li').addClass('active').
+              siblings().removeClass('active');
+            }
+          });
+        };
+
+        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+          e.preventDefault();
+          showSection($(this).attr('href'), true);
+        });
+
+        $(window).scroll(function () {
+          checkSection();
+        });
+    </script>
+</body>
+
+</body>
+</html>
